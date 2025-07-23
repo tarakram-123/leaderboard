@@ -10,7 +10,7 @@ const UserSelector = () => {
   const fetchUsers = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("http://localhost:5000/api/users");
+      const res = await axios.get("https://leaderboard-backend-g15h.onrender.com");
       setUsers(res.data);
     } catch (error) {
       console.error("Error fetching users:", error);
@@ -28,7 +28,7 @@ const UserSelector = () => {
     
     setClaiming(true);
     try {
-      const res = await axios.post("http://localhost:5000/api/points", { 
+      const res = await axios.post("https://leaderboard-backend-g15h.onrender.com", { 
         userId: selected 
       });
       
