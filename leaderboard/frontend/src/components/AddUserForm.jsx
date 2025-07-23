@@ -13,7 +13,7 @@ const AddUserForm = () => {
     
     setLoading(true);
     try {
-      await axios.post("http://localhost:5000/api/users", { name: name.trim() });
+      await axios.post("https://leaderboard-backend-g15h.onrender.com", { name: name.trim() });
       alert("User added successfully!");
       setName('');
     } catch (error) {
